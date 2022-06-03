@@ -11,6 +11,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
         >
             <Image
                 layout='responsive'
+                alt='poster'
                 src={`${BASE_URL}${result.backdrop_path || result.poster_path}` || `${BASE_URL}${result.poster_path}`}
                 height={1080}
                 width={1920}
@@ -30,4 +31,5 @@ const Thumbnail = forwardRef(({ result }, ref) => {
     );
 });
 
+Thumbnail.displayName = 'Thumbnail';
 export default Thumbnail;
